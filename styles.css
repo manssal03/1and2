@@ -8,8 +8,6 @@ aside {
   color: #050505;
 }
 
-
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -17,6 +15,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.555);
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
 ul li a {
