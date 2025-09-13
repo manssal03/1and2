@@ -1,31 +1,39 @@
-/* Baslayout – mobil först */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+body{
   display: grid;
-  grid-template-rows: auto auto 1fr auto; /* header, nav, main, footer */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0,5em;
+  margin: auto;
+  padding: 0.5em;
   min-height: 100vh;
+  max-width: 1200px;
   background-color: transparent;
   background-image: url("Images/paper.jpg");
 }
 
-/* Header */
+p{
+  padding: 1em;
+}
+
 header {
+  min-height: 100px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
   background: #333;
   color: white;
-  padding: 1em;
-  text-align: center;
+  padding: 10px 0px 0px 0px;
 }
-header h1 {
+
+header h1{
   margin: 0;
 }
 
-/* Nav */
-nav ul {
+header p {
+  padding: 10px;
+}
+
+nav ul{
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,89 +41,67 @@ nav ul {
   justify-content: center;
   background: #555;
 }
+
 nav ul li a {
   display: block;
   padding: 1em;
   color: white;
   text-decoration: none;
 }
+
 nav ul li a:hover {
   background: #777;
 }
 
-/* Main och aside */
-main {
+main{
   padding: 1em;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
+
 aside {
-  background: #eee;
+  background: #EEE;
   padding: 1em;
   margin: 1em 0;
-
 }
 
-/* Footer */
+.article-aside{
+  padding: 1rem;
+  border-left: 3px solid #ccc;
+  background: rgba(128, 128, 128, 0.329);
+  padding: 10px;
+  margin-top: 1em;
+  border-top: 3px solid #ccc;
+}
+
+
+article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  
+}
+
 footer {
   background: #333;
-  color: white;
   text-align: center;
   padding: 1em;
+  color: white;
+  grid-column: 1 /4;
+  grid-row: 3 / 4;
 }
 
-.article-aside {
-  background: #ddd;
-  padding: 0.5em;
-  margin: 0.5em;
-  float: right;       /* flytta till höger i artikeln */
-  width: 50%;         /* liten ruta */
-  font-size: 0.9em;
+.page-aside {
+  background: blue;
 }
 
-/* --- RESPONSIV LAYOUT --- */
-
-/* Plattor (>= 480px) */
-@media (min-width: 480px) {
-  .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* main + aside */
-    gap: 1em;
-  }
+.header-page-aside{
+  background: white;
+  color: black;
 }
 
-/* Desktop (>= 1024px) */
-@media (min-width: 1024px) {
-  main {
-    column-count: 2;   /* två textkolumner */
-    column-gap: 2em;
-  }
-}
 
-/* Stor desktop (>= 1200px) */
-@media (min-width: 1200px) {
-  body {
-    max-width: 1200px;
-    margin: auto; /* centrerad */
-  }
-  main {
-    column-count: 3;   /* tre textkolumner */
-  }
-}
 
-/* Extra liten skärm (< 100px) */
-@media (max-width: 100px) {
-  body {
-    width: 100px;
-    overflow-x: scroll;
-  }
-}
 
-/* Skrivare */
-@media print {
-  * {
-    background: none !important;
-    color: black !important;
-  }
-  nav, aside, footer {
-    display: none;
-  }
-}
+
