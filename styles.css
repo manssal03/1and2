@@ -26,7 +26,7 @@ header {
   padding: 10px;
   text-align: center;
   border-top: 2px solid black;
-  border-radius: 10px;
+  border-radius: 5px;
 
   grid-column-start: 1;
   grid-column-end: 2;
@@ -46,7 +46,7 @@ nav ul {
   display: flex;
   justify-content: center;
   background: #555;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 nav ul li a {
@@ -58,7 +58,7 @@ nav ul li a {
 
 nav ul li a:hover {
   background: #777;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 main {
@@ -75,12 +75,12 @@ aside {
   background: rgb(212, 211, 211);
   padding: 1em;
   margin: 1em 0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .page-aside {
   margin: 2em;
-  border-radius: 10px;
+  border-radius: 5px;
   background: rgba(128, 128, 128, 0.527);
   text-align: center;
 }
@@ -99,7 +99,7 @@ footer {
   background-image: linear-gradient(white, grey);
   text-align: center;
   padding: 1em;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 footer p {
