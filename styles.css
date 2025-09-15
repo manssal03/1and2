@@ -14,19 +14,26 @@ body {
 p {
   padding: 1em;
 }
+
+mark{
+  background: rgba(255, 0, 0, 0.637);
+  padding: 0.1em;
+}
+
 header {
   background-image: linear-gradient(grey, white);
   min-height: 40px;
   padding: 10px;
   text-align: center;
   border-top: 2px solid black;
+  border-radius: 10px;
 
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
 header p {
-  color: rgb(238, 215, 86);
+  color: rgb(88, 108, 223);
   margin: 0;
   column-count: 1;
   column-width: auto;
@@ -91,6 +98,7 @@ footer {
   background-image: linear-gradient(white, grey);
   text-align: center;
   padding: 1em;
+  border-radius: 10px;
 }
 
 footer p {
