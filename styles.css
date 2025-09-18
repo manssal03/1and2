@@ -114,6 +114,14 @@ footer p {
 
 table {
   text-align: left;
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
 article table {
@@ -126,6 +134,10 @@ article {
   border: 4px solid black;
   margin: 10px;
   padding: 1em;
+}
+
+img {
+  max-width: 100%;
 }
 
 @media (min-width: 480px) {
