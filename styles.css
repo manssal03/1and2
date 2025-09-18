@@ -15,7 +15,7 @@ p {
   padding: 1em;
 }
 
-mark{
+mark {
   background: rgba(255, 0, 0, 0.637);
   padding: 0.1em;
 }
@@ -116,7 +116,7 @@ table {
   text-align: left;
 }
 
-article table{
+article table {
   margin: 0 auto;
 }
 
@@ -127,7 +127,6 @@ article {
   margin: 10px;
   padding: 1em;
 }
-
 
 @media (min-width: 480px) {
   body {
