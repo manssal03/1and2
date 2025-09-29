@@ -39,33 +39,112 @@
           >
             <fieldset>
               <legend>Information:</legend>
-              <label
+              <label for="name"
                 >Namn:
                 <input
+                  id="name"
                   type="text"
                   name="namn"
-                  placeholder="Ditt namn"
+                  placeholder="Ange ditt namn"
                   autofocus
+                  required
+                  pattern="^[A-Za-zÅÄÖåäö\- ]{2,40}$"
+                  title="Endast bokstäver (inkl. ÅÄÖ), mellanslag och bindestreck."
                 /> </label
               ><br />
-              <label>
-                Email:
+              <label for="email">
+                E-post:
                 <input
+                  id="email"
                   type="email"
                   name="email"
-                  placeholder="Din email"
-                  autofocus
+                  placeholder="namn@exempel.com"
+                  required
+                  title="Ange en giltig e-postadress (t.ex. namn@example.com)"
                 /> </label
               ><br />
-              <label>
-                Hemsida:
+              <label for="website">
+                Hemsida / profil:
                 <input
+                  id="website"
                   type="url"
                   name="website"
-                  placeholder="Länk till din hemsida"
-                  autofocus
+                  list="profiler"
+                  placeholder="https://..."
+                  pattern="https?://.+"
+                  title="Måste börja med http:// eller https://"
+                />
+                <datalist id="profiler">
+                  <option value="https://facebook.com/dittnamn"></option>
+                  <option value="https://instagram.com/dittnamn"></option>
+                  <option value="https://linkedin.com/dittnamn"></option>
+                  <option value="https://twitter.com/dittnamn"></option>
+                </datalist>
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Preferenser</legend>
+              <label for="answer">
+                <input
+                  id="answer"
+                  name="want_reply"
+                  type="checkbox"
+                  value="ja"
+                />
+                Jag vill ha svar
+              </label>
+              <br />
+              <span>Kopia på meddelandet?</span>
+              <br />
+              <label for="copy-yes">
+                <input
+                  id="copy-yes"
+                  name="copy"
+                  type="radio"
+                  value="ja"
+                  required
+                />
+                Ja, skicka en kopia
+              </label>
+              <label for="copy-no">
+                <input id="copy-no" name="copy" type="radio" value="nej" />
+                Nej, ingen kopia
+              </label>
+              <br />
+              <label for="ämne">Ämne:</label>
+              <select id="ämne" name="ämne" required title="Välj ett ämne">
+                <option>>-- Välj ämne --</option>
+                <option value="Support">Support</option>
+                <option value="Faktura">Faktura</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Övrigt">Övrigt</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>Meddelande:</legend>
+              <label for="message">Ditt meddelande:</label><br />
+              <textarea
+                id="message"
+                name="meddelande"
+                placeholder="Skriv ditt meddelande här..."
+                required
+                title="Skriv minst 10 tecken."
+              ></textarea>
+            </fieldset>
+            <fieldset>
+              <legend>Bilaga:</legend>
+              <label for="file">
+                <input
+                  id="file"
+                  name="file"
+                  type="file"
+                  title="Välj en fil att bifoga(valfritt)"
                 />
               </label>
+            </fieldset>
+            <fieldset>
+              <legend>Skicka</legend>
+              <input type="submit" value="Skicka" />
             </fieldset>
           </form>
         </article>
@@ -75,7 +154,7 @@
       &copy; 2025 Måns Salminen
       <p>
         Kontakta mig på mail
-        <a href="mailto:mans.salminen@gmail.com">Mail</a>
+        <a href="mailto:mans.salminen@gmail.com">här!</a>
       </p>
     </footer>
   </body>
