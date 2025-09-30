@@ -80,6 +80,10 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+summary:hover {
+  cursor: pointer;
+}
+
 nav li.active {
   background-color: #42a3cf;
   border-radius: 5px;
@@ -89,8 +93,13 @@ nav li a:active {
   transform: scale(0.9);
 }
 
-aside.page-aside a:visited img {
-  opacity: 0.6;
+article a:visited {
+  color: purple;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
 }
 
 main {
