@@ -102,10 +102,15 @@ a:link {
   text-decoration: none;
 }
 
+ol {
+  list-style: upper-roman outside;
+}
+
 main {
   padding: 0.5em;
   margin: 0;
   padding-top: 0;
+  padding-left: 0px;
 }
 
 details {
@@ -156,6 +161,7 @@ footer p {
 table {
   text-align: left;
   width: 100%;
+  table-layout: fixed;
 }
 
 table,
@@ -164,6 +170,9 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 article table {
@@ -174,7 +183,7 @@ article {
   background-color: #8fb2c6ab;
   border-radius: 5px;
   border: 4px solid rgba(0, 0, 0, 0.575);
-  margin: 0.5em;
+  margin: 0.5em 0.5em 0.5em 0;
   padding: 0.5em;
   margin-top: 0;
 }
