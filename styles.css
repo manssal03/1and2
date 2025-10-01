@@ -19,8 +19,6 @@ body {
 
 p {
   padding: 1em;
-  column-count: 1;
-  column-width: auto;
 }
 
 mark {
@@ -124,6 +122,7 @@ aside {
   margin: 1em 0;
   border-radius: 5px;
   margin-top: 0;
+  display: flow-root;
 }
 
 .page-aside {
@@ -140,6 +139,13 @@ aside {
 
 .page-aside li {
   padding: 1em;
+}
+
+.float-fig {
+  float: right;
+  width: 200px;
+  display: block;
+  margin: 0.5em;
 }
 
 footer {
@@ -222,11 +228,6 @@ textarea {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 0.5em;
-  }
-
-  p {
-    column-count: 2;
-    column-width: 8em;
   }
 
   header {
