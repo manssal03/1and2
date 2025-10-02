@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Måns Salminen || Video</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      .video-content {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.575);
+        color: white;
+      }
+
+      #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: white;
+        cursor: pointer;
+      }
+
+      #myBtn:hover {
+        background: #ddd;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="Video/rendering_kurs.mp4" type="video/mp4" />
+    </video>
+    <article class="video-content">
+      <h1>Heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+        deserunt! Omnis sint sapiente id eius alias non doloremque nihil nobis
+        unde impedit, iure placeat accusamus laboriosam odit dolorem. Dolorem,
+        praesentium.
+      </p>
+      <button id="myBtn">Pause</button>
+    </article>
+  </body>
+</html>
