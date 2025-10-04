@@ -204,6 +204,7 @@ article {
   margin: 0.5em 0.5em 0.5em 0;
   padding: 0.5em;
   margin-top: 0;
+  overflow: auto;
 }
 
 article p {
@@ -231,11 +232,58 @@ textarea:focus {
   outline: none;
 }
 
+input {
+  margin: 0.25em;
+  padding: 0.3em;
+  border: 2px solid rgba(94, 126, 165, 1);
+  border-radius: 5px;
+}
+
+label {
+  margin: 0.25em;
+}
+
+fieldset {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+select {
+  margin: 20px 0px 10px 0px;
+  border: none;
+  border-radius: 2px;
+  height: 25px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin: 10px 0px 20px 0px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  background-image: url(Images/send_icon.png);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  padding-left: 30px;
+  background-position: 5px center;
+}
+
+input[type="file"] {
+  border: none;
+}
+
 textarea {
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgba(94, 126, 165, 1);
+  margin: 0.5em;
   border-radius: 5px;
   resize: none;
   width: 50%;
+  height: 60px;
 }
 
 #myVideo {
